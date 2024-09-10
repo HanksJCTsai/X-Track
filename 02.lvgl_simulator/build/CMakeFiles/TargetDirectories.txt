@@ -1,0 +1,4 @@
+C:/Develop/LVGL/X-Track/02.lvgl_simulator/build/CMakeFiles/main.dir
+C:/Develop/LVGL/X-Track/02.lvgl_simulator/build/CMakeFiles/run.dir
+C:/Develop/LVGL/X-Track/02.lvgl_simulator/build/CMakeFiles/edit_cache.dir
+C:/Develop/LVGL/X-Track/02.lvgl_simulator/build/CMakeFiles/rebuild_cache.dir
