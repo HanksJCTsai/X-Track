@@ -1,10 +1,10 @@
 {
 	"folders": [
 		{
-			"path": "lvgl_simulator"
+			"path": "02.lvgl_simulator"
 		},
 		{
-			"path": "CODE"
+			"path": "01.Code"
 		}
 	],
 	"settings": {}

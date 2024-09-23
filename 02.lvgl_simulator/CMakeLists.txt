@@ -16,7 +16,9 @@ find_package(SDL2 REQUIRED SDL2)
 include_directories(${SDL2_INCLUDE_DIRS})
 add_executable(main main.c mouse_cursor_icon.c ${SOURCES} ${INCLUDES})
 
-file(COPY SDL2.DLL DESTINATION ../bin)
+if(EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/SDL2.DLL)
+    file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/SDL2.DLL DESTINATION ${EXECUTABLE_OUTPUT_PATH})
+endif()
 
 add_compile_definitions(LV_CONF_INCLUDE_SIMPLE)
 target_link_libraries(main PRIVATE SDL2 )

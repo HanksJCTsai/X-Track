@@ -23,7 +23,6 @@ typedef FF_DIR dir_t;
  *  STATIC PROTOTYPES
  **********************/
 static void fs_init(void);
-
 static bool fs_ready(lv_fs_drv_t* drv);
 static void* fs_open(lv_fs_drv_t* drv, const char* path, lv_fs_mode_t mode);
 static lv_fs_res_t fs_close(lv_fs_drv_t* drv, void* file_p);

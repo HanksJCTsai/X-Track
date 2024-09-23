@@ -7,8 +7,8 @@
 //static lv_color_t lv_full_disp_buf[DISP_BUF_SIZE];
 lv_color_t* lv_disp_buf_p;
 
-static lv_disp_draw_buf_t disp_buf;
-static lv_disp_drv_t disp_drv;
+static lv_disp_draw_buf_t display_buf;
+static lv_disp_drv_t display_drv;
 
 void my_print(lv_log_level_t level, const char* file, uint32_t line, const char* fun, const char* dsc)
 {
@@ -38,8 +38,9 @@ static void disp_wait_cb(lv_disp_drv_t* disp_drv)
 
 void LVPortDisplayInit(DISPLAY_CLASS* scr)
 {
+    /* register print function for debugging */
     lv_log_register_print_cb(
-        reinterpret_cast<lv_log_print_g_cb_t>(my_print)); /* register print function for debugging */
+        reinterpret_cast<lv_log_print_g_cb_t>(my_print)); 
 
     /* Move the malloc process to Init() to make sure that the largest heap can be used for this buffer.
      *
@@ -48,15 +49,15 @@ void LVPortDisplayInit(DISPLAY_CLASS* scr)
         LV_LOG_WARN("lv_port_disp_init malloc failed!\n");
     */
 
-    lv_disp_draw_buf_init(&disp_buf, lv_disp_buf_p, nullptr, DISP_BUF_SIZE);
+    lv_disp_draw_buf_init(&display_buf, lv_disp_buf_p, nullptr, DISP_BUF_SIZE);
 
     /*Initialize the display*/
-    lv_disp_drv_init(&disp_drv);
-    disp_drv.hor_res = DISP_HOR_RES;
-    disp_drv.ver_res = DISP_VER_RES;
-    disp_drv.flush_cb = disp_flush_cb;
-    disp_drv.wait_cb = disp_wait_cb;
-    disp_drv.draw_buf = &disp_buf;
-    disp_drv.user_data = scr;
-    lv_disp_drv_register(&disp_drv);
+    lv_disp_drv_init(&display_drv);
+    display_drv.hor_res = DISP_HOR_RES;
+    display_drv.ver_res = DISP_VER_RES;
+    display_drv.flush_cb = disp_flush_cb;
+    display_drv.wait_cb = disp_wait_cb;
+    display_drv.draw_buf = &display_buf;
+    display_drv.user_data = scr;
+    lv_disp_drv_register(&display_drv);
 }
