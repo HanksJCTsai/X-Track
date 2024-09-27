@@ -7,5 +7,9 @@
 			"path": "01.Code"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"files.associations": {
+			"*.tcc": "cpp"
+		}
+	}
 }

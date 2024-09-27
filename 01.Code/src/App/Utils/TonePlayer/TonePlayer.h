@@ -19,7 +19,7 @@ class TonePlayer {
             SPEED_DOUBLE = 128
         };
 
-        TonePlayer(/* args */);
+        TonePlayer();
         ~TonePlayer() {};
         void setSpeed(uint16_t speed);
         void setMusic(const MusicNote_t* music, uint16_t size);
@@ -32,10 +32,10 @@ class TonePlayer {
             Play();
         };
         void Stop();
-        void Update(uint32_t trackTime);
+        bool Update(uint32_t tickTime);
 
     private:
-        uint16_t Length;
+        uint16_t MusicLength;
         uint16_t CurrentPos;
         uint32_t NextTime;
         uint16_t Speed;
