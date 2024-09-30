@@ -10,7 +10,7 @@ TonePlayer::TonePlayer(/* args */) {
 
 void TonePlayer::setSpeed(uint16_t speed) { Speed = speed; }
 
-void TonePlayer::setMusic(const MusicNote_t* music, uint16_t size) {
+void TonePlayer::setMusic(const MusicNode_t* music, uint16_t size) {
     if (music == nullptr) {
         CurrentMusic = nullptr;
         MusicLength = 0;
