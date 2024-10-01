@@ -7,3 +7,4 @@ markmap:
 ## C++ .inc的使用方法
 ## line continuation character
 ## 定義macro在Header檔中
+## virtual function說明與用法
