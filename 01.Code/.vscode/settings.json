@@ -267,7 +267,8 @@
     "C:/Users/JCTsai0/.platformio/packages/framework-arduinoespressif32/libraries/WiFiClientSecure/src",
     "C:/Users/JCTsai0/.platformio/packages/framework-arduinoespressif32/libraries/WiFiProv/src",
     "C:/Users/JCTsai0/.platformio/packages/framework-arduinoespressif32/libraries/Wire/src",
-    ""
+    "${workspaceFolder}/src/App/Utils/PageManager/PageBase",
+    "${workspaceFolder}/src/App/Utils/PageManager/PageFactory"
   ],
   "C_Cpp_Runner.includeSearch": [
     "*",
